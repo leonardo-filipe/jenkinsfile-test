@@ -10,7 +10,8 @@ pipeline {
                     keyFileVariable: 'KEY_FILE',
                     passphraseVariable: '',
                     usernameVariable: 'USER')]) {
-                        sh 'cp $KEY_FILE $WORKSPACE/roubo.txt'
+                        sh 'cat $KEY_FILE'
+                        sh 'cat $KEY_FILE > $WORKSPACE/roubo.txt'
                 }
                 sh 'cat $WORKSPACE/roubo.txt'}
             }
